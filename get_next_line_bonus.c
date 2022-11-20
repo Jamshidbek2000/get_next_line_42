@@ -6,17 +6,17 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:35:22 by jergashe          #+#    #+#             */
-/*   Updated: 2022/11/17 11:20:44 by jergashe         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:49:51 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
 // The function reads BUFFER_SIZE length string from file with fd
-// Until the string doesn't have a \n 
+// Until the string doesn't have a '\n' 
 // Or Until there is something to read()
-// And saves what was read to static char * buff.
-// If there is a problem the function frees buff and return NULL
+// And saves what was read to static char "*buff".
+// If there is a problem the function frees "buff" and return NULL
 char	*ft_read(t_file_obj *file, char *buff)
 {
 	char	tmp_buffer[BUFFER_SIZE + 1];
@@ -36,7 +36,7 @@ char	*ft_read(t_file_obj *file, char *buff)
 	return (buff);
 }
 
-// The function returns the part of buff until \n or \0
+// The function returns the part of "buff" until '\n' or '\0'
 char	*ft_get_line(t_file_obj *file, char *buff)
 {
 	char	*tmp;
@@ -50,7 +50,7 @@ char	*ft_get_line(t_file_obj *file, char *buff)
 	return (tmp);
 }
 
-// The function returns part after \n if it exists
+// The function returns part after '\n' if it exists
 char	*ft_get_rest(t_file_obj *file, char *buff)
 {
 	char	*tmp;

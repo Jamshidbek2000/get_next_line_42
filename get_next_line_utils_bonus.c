@@ -6,7 +6,7 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:46:46 by jergashe          #+#    #+#             */
-/*   Updated: 2022/11/17 11:19:11 by jergashe         ###   ########.fr       */
+/*   Updated: 2022/11/20 14:50:52 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (res);
 }
 
+// The function allocates new str with copies of
+// "str" from "start" to "end" indeces
 char	*ft_strndup(char *str, int start, int end)
 {
 	char	*result;
