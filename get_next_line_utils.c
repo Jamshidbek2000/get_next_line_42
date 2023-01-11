@@ -6,7 +6,7 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:46:46 by jergashe          #+#    #+#             */
-/*   Updated: 2022/11/20 14:50:42 by jergashe         ###   ########.fr       */
+/*   Updated: 2023/01/11 08:40:51 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_file_obj	*get_t_file_obj(int new_fd)
 	return (file);
 }
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	count;
 
@@ -36,7 +36,7 @@ int	ft_strlen(const char *s)
 	return (count);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_free_1(char *s1, char *s2)
 {
 	size_t	size;
 	char	*res;
@@ -65,7 +65,7 @@ char	*ft_strjoin(char *s1, char *s2)
 
 // The function allocates new str with copies of
 // "str" from "start" to "end" indeces
-char	*ft_strndup(char *str, int start, int end)
+char	*ft_strndup2(char *str, int start, int end)
 {
 	char	*result;
 	int		i;

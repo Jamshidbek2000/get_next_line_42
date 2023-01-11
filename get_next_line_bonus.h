@@ -6,7 +6,7 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:51:52 by jergashe          #+#    #+#             */
-/*   Updated: 2022/11/17 14:51:49 by jergashe         ###   ########.fr       */
+/*   Updated: 2023/01/11 08:40:48 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ char		*get_next_line(int fd);
 
 int			containts_new_line(char *str);;
 t_file_obj	*get_t_file_obj(int new_fd);
-int			ft_strlen(const char *s);
-char		*ft_strjoin(char *s1, char *s2);
-char		*ft_strndup(char *str, int start, int end);
+size_t		ft_strlen(const char *s);
+char		*ft_strjoin_free_1(char *s1, char *s2);
+char		*ft_strndup2(char *str, int start, int end);
 
 #endif
