@@ -6,7 +6,7 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:35:22 by jergashe          #+#    #+#             */
-/*   Updated: 2023/01/11 08:40:35 by jergashe         ###   ########.fr       */
+/*   Updated: 2023/01/11 10:02:59 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_read(t_file_obj *file, char *buff)
 			return (free(buff), NULL);
 		tmp_buffer[read_size] = '\0';
 		buff = ft_strjoin_free_1(buff, tmp_buffer);
-		if (buff == NULL || ft_strlen(buff) == 0)
+		if (buff == NULL || gn_strlen(buff) == 0)
 			return (free(buff), NULL);
 	}
 	return (buff);
@@ -41,12 +41,12 @@ char	*ft_get_line(t_file_obj *file, char *buff)
 {
 	char	*tmp;
 
-	if (buff == NULL || ft_strlen(buff) == 0)
+	if (buff == NULL || gn_strlen(buff) == 0)
 		return (NULL);
 	file->new_line_index = containts_new_line(buff);
 	if (file->new_line_index >= 0)
 		return (ft_strndup2(buff, 0, file->new_line_index + 1));
-	tmp = ft_strndup2(buff, 0, ft_strlen(buff));
+	tmp = ft_strndup2(buff, 0, gn_strlen(buff));
 	return (tmp);
 }
 
@@ -56,10 +56,10 @@ char	*ft_get_rest(t_file_obj *file, char *buff)
 	char	*tmp;
 
 	tmp = NULL;
-	if (buff == NULL || ft_strlen(buff) == 0)
+	if (buff == NULL || gn_strlen(buff) == 0)
 		return (free(buff), NULL);
 	if (file->new_line_index != -1)
-		tmp = ft_strndup2(buff, file->new_line_index + 1, ft_strlen(buff));
+		tmp = ft_strndup2(buff, file->new_line_index + 1, gn_strlen(buff));
 	free(buff);
 	return (tmp);
 }
