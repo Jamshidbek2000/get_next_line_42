@@ -6,7 +6,7 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:46:46 by jergashe          #+#    #+#             */
-/*   Updated: 2023/01/11 10:02:59 by jergashe         ###   ########.fr       */
+/*   Updated: 2023/01/17 09:25:20 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	gn_strlen(const char *s)
 	return (count);
 }
 
-char	*ft_strjoin_free_1(char *s1, char *s2)
+char	*gn_strjoin_free_1(char *s1, char *s2)
 {
 	size_t	size;
 	char	*res;

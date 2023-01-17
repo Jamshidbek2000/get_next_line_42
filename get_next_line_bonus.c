@@ -6,7 +6,7 @@
 /*   By: jergashe <jergashe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:35:22 by jergashe          #+#    #+#             */
-/*   Updated: 2023/01/11 10:02:59 by jergashe         ###   ########.fr       */
+/*   Updated: 2023/01/17 09:25:20 by jergashe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_read(t_file_obj *file, char *buff)
 		if (read_size == -1)
 			return (free(buff), NULL);
 		tmp_buffer[read_size] = '\0';
-		buff = ft_strjoin_free_1(buff, tmp_buffer);
+		buff = gn_strjoin_free_1(buff, tmp_buffer);
 		if (buff == NULL || gn_strlen(buff) == 0)
 			return (free(buff), NULL);
 	}
